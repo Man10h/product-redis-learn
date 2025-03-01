@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: redis
+  datasource:
+    username: root
+    password: Manh2004
+    url: jdbc:mysql://localhost:3306/redis
+  jpa:
+    hibernate:
+      ddl-auto: none
+    #      none, update, auto-update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        enable_lazy_load_no_trans: true
+        format_sql: true
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis
+
